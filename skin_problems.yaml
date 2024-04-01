@@ -1,0 +1,9 @@
+# Dataset Path
+path: C:\Users\DELL\Notebooks\Skin Problems Segmentation\skin-problem-dataset
+
+train: images\train # relative to path
+val: images\val # relative to path
+test: images\test # relative to path
+
+# Class Names
+names: [acne, acne_scar, black_heads, cyst, dark_circles, dry_skin, enlarged_pores, eye_bags, freckles, hyperpigmentation, melasma, nodules, oily_skin, papules, PIH, pustules, skin_redness, vascula, white_heads, wrinkles]

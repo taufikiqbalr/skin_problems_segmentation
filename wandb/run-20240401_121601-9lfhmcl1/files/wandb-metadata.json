@@ -1,0 +1,57 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.11.3",
+    "heartbeatAt": "2024-04-01T05:16:03.101658",
+    "startedAt": "2024-04-01T05:16:01.498986",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "segment",
+        "train",
+        "model=yolov8l-seg.pt",
+        "data=skin_problems.yaml",
+        "imgsz=640",
+        "workers=0",
+        "batch=2",
+        "epochs=300",
+        "patience=50",
+        "name=yolov8_skin_problems"
+    ],
+    "state": "running",
+    "program": "-m __main__",
+    "codePathLocal": null,
+    "host": "DELL-DXQQ1T3",
+    "username": "DELL",
+    "executable": "C:\\Python311\\python.exe",
+    "cpu_count": 12,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2100.0,
+        "min": 0.0,
+        "max": 2100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2100.0,
+            "min": 0.0,
+            "max": 2100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 474.18358993530273,
+            "used": 439.9429016113281
+        }
+    },
+    "gpu": "NVIDIA T550 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA T550 Laptop GPU",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 15.240596771240234
+    }
+}

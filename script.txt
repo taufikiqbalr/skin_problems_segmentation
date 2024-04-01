@@ -1,0 +1,18 @@
+# convert labelme to yolo format
+python labelme2yolo.py  --dataset skin_problems_labelme --names classes.txt
+
+# run split dataset
+python .\split_dataset.py --train 80 --validation 10 --test 10 --folder .\yolo_annotation\ --dest skin-problem-dataset
+
+# run yolo train
+yolo segment train model=yolov8l-seg.pt data=skin_problems.yaml imgsz=640 workers=0 batch=2 epochs=300 patience=50 name=yolov8_skin_problems
+
+# run tensorboard
+tensorboard --logdir runs\segment\yolov8_skin_problems
+
+# retrain again
+yolo segment train model=runs\segment\yolov8_skin_problems\weights\last.pt resume=True
+
+# predict
+yolo segment predict model=runs\segment\yolov8_skin_problems\weights\best.pt source=inference\image.jpg save=True
+
